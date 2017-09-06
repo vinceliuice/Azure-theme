@@ -81,8 +81,7 @@ label:disabled {
   color: rgba(211, 218, 227, 0.45); }
 
 .dim-label, label.separator, popover label.separator,
-popover.background label.separator, headerbar .subtitle,
-.titlebar:not(headerbar) .subtitle {
+popover.background label.separator, headerbar .subtitle {
   opacity: 0.55; }
 
 assistant .sidebar {
@@ -750,8 +749,7 @@ modelbutton.flat arrow.right {
     color: #a2c3fa; }
     *:selected *:link:active, *:selected button:active:link, *:selected button:active:visited {
       color: #d9e7fd; }
-  infobar.info *:link, infobar.info button:link, infobar.info button:visited, infobar.question *:link, infobar.question button:link, infobar.question button:visited, infobar.warning *:link, infobar.warning button:link, infobar.warning button:visited, infobar.error *:link, infobar.error button:link, infobar.error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link,
-  .selection-mode.titlebar:not(headerbar) .subtitle:link, *:selected *:link, *:selected button:link, *:selected button:visited {
+  infobar.info *:link, infobar.info button:link, infobar.info button:visited, infobar.question *:link, infobar.question button:link, infobar.question button:visited, infobar.warning *:link, infobar.warning button:link, infobar.warning button:visited, infobar.error *:link, infobar.error button:link, infobar.error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link, *:selected *:link, *:selected button:link, *:selected button:visited {
     color: #d9e7fd; }
 
 button:link > label, button:visited > label {
@@ -883,89 +881,65 @@ actionbar {
   border-top: 1px solid #313541;
   background-color: #313541; }
 
-headerbar,
-.titlebar:not(headerbar) {
+headerbar {
   min-height: 42px;
   padding: 0 10px;
   color: rgba(207, 218, 231, 0.8);
-  background-color: #2f343f;
-  box-shadow: inset 0 1px #3a404e, inset 0 -1px #262a33, 0 1px 2px rgba(16, 18, 22, 0.7); }
-  .csd headerbar, .csd
-  .titlebar:not(headerbar) {
+  background-color: #2f343f; }
+  .csd headerbar {
     background-color: #2F343F;
     border-color: #262a33; }
-  headerbar:backdrop,
-  .titlebar:backdrop:not(headerbar) {
+  headerbar:backdrop {
     transition: 200ms ease-out;
     color: rgba(207, 218, 231, 0.5);
     background-color: #323843; }
-    .csd headerbar:backdrop, .csd
-    .titlebar:backdrop:not(headerbar) {
+    .csd headerbar:backdrop {
       background-color: #323843; }
-  headerbar .title,
-  .titlebar:not(headerbar) .title {
+  headerbar .title {
     padding-left: 12px;
     padding-right: 12px; }
-  headerbar .subtitle,
-  .titlebar:not(headerbar) .subtitle {
+  headerbar .subtitle {
     font-size: smaller;
     padding-left: 12px;
     padding-right: 12px; }
-  headerbar.selection-mode,
-  .selection-mode.titlebar:not(headerbar) {
+  headerbar.selection-mode {
     color: #ffffff;
     background-color: #4285F4;
     border-color: #2f79f3;
     box-shadow: none; }
-    headerbar.selection-mode:backdrop,
-    .selection-mode.titlebar:backdrop:not(headerbar) {
+    headerbar.selection-mode:backdrop {
       background-color: #4285F4;
       color: rgba(255, 255, 255, 0.6); }
-    headerbar.selection-mode .selection-menu,
-    .selection-mode.titlebar:not(headerbar) .selection-menu {
+    headerbar.selection-mode .selection-menu {
       box-shadow: none;
       padding-left: 10px;
       padding-right: 10px; }
-      headerbar.selection-mode .selection-menu GtkArrow,
-      .selection-mode.titlebar:not(headerbar) .selection-menu GtkArrow {
+      headerbar.selection-mode .selection-menu GtkArrow {
         -GtkArrow-arrow-scaling: 1; }
-      headerbar.selection-mode .selection-menu .arrow,
-      .selection-mode.titlebar:not(headerbar) .selection-menu .arrow {
+      headerbar.selection-mode .selection-menu .arrow {
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    .maximized headerbar.selection-mode, .maximized
-    .selection-mode.titlebar:not(headerbar) {
+    .maximized headerbar.selection-mode {
       background-color: #4285f4; }
-  .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop, .tiled
-  .titlebar:not(headerbar), .tiled
-  .titlebar:backdrop:not(headerbar), .maximized
-  .titlebar:not(headerbar), .maximized
-  .titlebar:backdrop:not(headerbar) {
+  .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
     border-radius: 0; }
-  .maximized headerbar, .maximized
-  .titlebar:not(headerbar) {
+  .maximized headerbar {
     background-color: #2f343f;
     border-color: #262a33; }
-    .maximized headerbar:backdrop, .maximized
-    .titlebar:backdrop:not(headerbar) {
+    .maximized headerbar:backdrop {
       background-color: #323843; }
-  headerbar.default-decoration, .csd headerbar.default-decoration, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop,
-  .default-decoration.titlebar:not(headerbar), .csd
-  .default-decoration.titlebar:not(headerbar),
-  .default-decoration.titlebar:backdrop:not(headerbar), .csd
-  .default-decoration.titlebar:backdrop:not(headerbar) {
+  headerbar.default-decoration, .csd headerbar.default-decoration, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop {
     min-height: 32px;
     padding: 0 3px;
     background-color: #2f343f;
-    border-bottom-width: 0; }
-    .maximized headerbar.default-decoration, .maximized .csd headerbar.default-decoration, .maximized headerbar.default-decoration:backdrop, .maximized .csd headerbar.default-decoration:backdrop, .maximized
-    .default-decoration.titlebar:not(headerbar), .maximized .csd
-    .default-decoration.titlebar:not(headerbar), .maximized
-    .default-decoration.titlebar:backdrop:not(headerbar), .maximized .csd
-    .default-decoration.titlebar:backdrop:not(headerbar) {
+    border-bottom-width: 0;
+    box-shadow: none; }
+    .maximized headerbar.default-decoration, .maximized .csd headerbar.default-decoration, .maximized headerbar.default-decoration:backdrop, .maximized .csd headerbar.default-decoration:backdrop {
       background-color: #2f343f; }
 
 .titlebar {
-  border-radius: 2px 2px 0 0; }
+  border-radius: 2px 2px 0 0;
+  box-shadow: inset 0 -1px #262a33, inset 0 1px #3a404e;
+  box-shadow: 0 1px 3px rgba(16, 18, 22, 0.7); }
 
 headerbar entry, headerbar button, headerbar separator {
   margin-top: 6px;
@@ -982,20 +956,17 @@ headerbar:last-child, headerbar:last-child:backdrop {
 window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, window.csd > .titlebar:not(headerbar), window.csd > .titlebar:not(headerbar):backdrop {
   padding: 0;
   background: none;
-  border: none;
-  box-shadow: none; }
+  border: none; }
 .titlebar:not(headerbar) > separator {
   background-image: linear-gradient(to bottom, #262a33, #262a33); }
 
-.primary-toolbar:not(.libreoffice-toolbar) separator, headerbar separator.titlebutton,
-.titlebar:not(headerbar) separator.titlebutton {
+.primary-toolbar:not(.libreoffice-toolbar) separator, headerbar separator.titlebutton {
   min-width: 0;
   min-height: 0;
   background: none;
   border-width: 0 0;
   border-image: linear-gradient(to bottom, rgba(207, 218, 231, 0) 25%, rgba(207, 218, 231, 0.15) 25%, rgba(207, 218, 231, 0.15) 75%, rgba(207, 218, 231, 0) 75%) 0 1/0 0 stretch; }
-  .primary-toolbar:not(.libreoffice-toolbar) separator:backdrop, headerbar separator.titlebutton:backdrop,
-  .titlebar:not(headerbar) separator.titlebutton:backdrop {
+  .primary-toolbar:not(.libreoffice-toolbar) separator:backdrop, headerbar separator.titlebutton:backdrop {
     opacity: 0.6; }
 
 .primary-toolbar entry, headerbar entry {
@@ -1089,7 +1060,7 @@ headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:acti
 .primary-toolbar .linked:not(.vertical).path-bar > button,
 headerbar .linked:not(.vertical).path-bar > button {
   padding: 3px;
-  margin: 0 0 1px 0;
+  margin: 0 0 0 0;
   color: rgba(207, 218, 231, 0.6);
   background-color: transparent; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
@@ -1106,7 +1077,7 @@ headerbar .linked:not(.vertical).path-bar > button {
     animation: header_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1);
     color: rgba(157, 178, 205, 0.8);
     background-color: #191c22;
-    box-shadow: inset 0 -1px #4285F4, 0 1px #4285F4; }
+    box-shadow: inset 0 -2px #4285F4; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
   .primary-toolbar .linked:not(.vertical).path-bar > button:disabled,
   headerbar .linked:not(.vertical).path-bar > button:disabled {
@@ -2809,7 +2780,8 @@ decoration {
     box-shadow: 0 0 0 0 rgba(32, 35, 43, 0.9), 0 8px 8px 0 transparent, 0 5px 5px 0 rgba(0, 0, 0, 0.35);
     transition: 200ms ease-out; }
   .fullscreen decoration, .tiled decoration {
-    border-radius: 0; }
+    border-radius: 0;
+    box-shadow: none; }
   .popup decoration {
     box-shadow: none;
     border-radius: 0; }
@@ -2990,12 +2962,9 @@ terminal-window notebook > header.top,
 
 .nautilus-canvas-item.dim-label, label.nautilus-canvas-item.separator,
 popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-canvas-item.subtitle,
-.titlebar:not(headerbar) .nautilus-canvas-item.subtitle,
 .nautilus-list-dim-label {
   color: #868b97; }
-  .nautilus-canvas-item.dim-label:selected, label.nautilus-canvas-item.separator:selected, headerbar .nautilus-canvas-item.subtitle:selected,
-  .titlebar:not(headerbar) .nautilus-canvas-item.subtitle:selected, .nautilus-canvas-item.dim-label:selected:focus, label.nautilus-canvas-item.separator:selected:focus, headerbar .nautilus-canvas-item.subtitle:selected:focus,
-  .titlebar:not(headerbar) .nautilus-canvas-item.subtitle:selected:focus,
+  .nautilus-canvas-item.dim-label:selected, label.nautilus-canvas-item.separator:selected, headerbar .nautilus-canvas-item.subtitle:selected, .nautilus-canvas-item.dim-label:selected:focus, label.nautilus-canvas-item.separator:selected:focus, headerbar .nautilus-canvas-item.subtitle:selected:focus,
   .nautilus-list-dim-label:selected,
   .nautilus-list-dim-label:selected:focus {
     color: #d9e7fd; }

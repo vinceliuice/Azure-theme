@@ -42,7 +42,7 @@ cp $ASSETS_DIR/entry-active-toolbar.png menubar-toolbar/entry-active-toolbar.png
 cp $ASSETS_DIR/entry-disabled-toolbar.png menubar-toolbar/entry-disabled-toolbar.png
 
 cp $ASSETS_DIR/menubar.png menubar-toolbar/menubar.png
-cp $ASSETS_DIR/menubar.png menubar-toolbar/menubar-light.png
+cp $ASSETS_DIR/menubar-light.png menubar-toolbar/menubar-light.png
 cp $ASSETS_DIR/menubar_button.png menubar-toolbar/menubar_button.png
 
 
