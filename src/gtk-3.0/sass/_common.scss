@@ -1260,6 +1260,7 @@ headerbar {
   .linked:not(.vertical).path-bar {
 
     > button {
+    padding-bottom: 3px;
     margin: 0;
     color: transparentize($header_fg, 0.2);
     background-color: transparent;
