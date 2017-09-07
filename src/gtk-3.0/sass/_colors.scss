@@ -29,7 +29,7 @@ $suggested_color: #2eb398;
 $destructive_fg_color: white;
 $suggested_fg_color: white;
 
-$progress_color: #3d8ffe;
+$progress_color: #7C4DFF;
 
 $drop_target_color: #F08437;
 
@@ -72,7 +72,7 @@ $osd_entry_border: transparentize(darken($osd_bg_color, 12%), 0.6);
 
 $osd_insensitive_bg_color: darken($osd_bg_color, 3%);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
-$osd_borders_color: transparentize(black, 0.5);
+$osd_borders_color: $osd_button_border;
 
 $panel_bg: darken($dark_sidebar_bg, 4.7%);
 $panel_fg: $dark_sidebar_fg;
