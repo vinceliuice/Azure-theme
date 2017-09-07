@@ -107,24 +107,17 @@ for trans in '' '-solid' ; do
 		metacity-theme-2${color}.xml \
 		${themedir}/metacity-1/metacity-theme-2.xml
 
-	# Install CINNAMON Theme
-	install -d ${themedir}/cinnamon
-	cd ${srcdir}/cinnamon
+	# Install Unity Theme
+	install -d ${themedir}/unity
+	cd ${srcdir}/unity
 	cp -ur \
-		common-assets \
-		${themedir}/cinnamon
+		*.svg \
+		dash \
+		${themedir}/unity
 
 	cp -ur \
-		assets${color} \
-		${themedir}/cinnamon/assets
-
-	cp -ur \
-		cinnamon${color}.css \
-		${themedir}/cinnamon/cinnamon.css
-
-	cp -ur \
-		thumbnail${color}.png \
-		${themedir}/cinnamon/thumbnail.png
+		window-buttons${color} \
+		${themedir}/unity/window-buttons
 
   done
 done
