@@ -37,4 +37,18 @@ Run
     ./Install
 
 
+## Screenshots
 
+### GNOME Shell
+
+#### Azure
+![01](https://github.com/vinceliuice/Azure-theme/blob/imgs/Azure.jpg?raw=true) 
+![03](https://github.com/vinceliuice/Azure-theme/blob/imgs/img-01.jpg?raw=true) 
+![04](https://github.com/vinceliuice/Azure-theme/blob/imgs/img-02.jpg?raw=true) 
+![05](https://github.com/vinceliuice/Azure-theme/blob/imgs/img-03.jpg?raw=true) 
+
+#### Azure-light
+![02](https://github.com/vinceliuice/Azure-theme/blob/imgs/Azure-light.jpg?raw=true) 
+
+#### Wallpaper
+![06](https://github.com/vinceliuice/Azure-theme/blob/imgs/wallpaper.jpg?raw=true) 
