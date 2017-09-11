@@ -1009,7 +1009,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   .primary-toolbar entry:focus, headerbar entry:focus {
     color: rgba(82, 93, 118, 0.8);
     border-color: #4285F4;
-    background-color: #dfe0e4;
+    background-color: rgba(247, 247, 247, 0.9);
     background-clip: border-box; }
     .primary-toolbar entry:focus image, headerbar entry:focus image {
       color: #4285F4; }
@@ -1072,6 +1072,11 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   background-image: none;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0); }
+.selection-mode.primary-toolbar button:hover, headerbar.selection-mode button:hover {
+  background-color: alpha(#ffffff,0.3); }
+.selection-mode.primary-toolbar button:backdrop, headerbar.selection-mode button:backdrop {
+  opacity: 0.7;
+  background: none; }
 .primary-toolbar .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child), headerbar .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child) {
   margin-right: 1px; }
 .primary-toolbar .linked:not(.vertical):not(.path-bar) > button, headerbar .linked:not(.vertical):not(.path-bar) > button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:hover, headerbar .linked:not(.vertical):not(.path-bar) > button:hover, .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:active, headerbar .linked:not(.vertical):not(.path-bar) > button:active, .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:checked, headerbar .linked:not(.vertical):not(.path-bar) > button:checked, .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:disabled, headerbar .linked:not(.vertical):not(.path-bar) > button:disabled {
@@ -1287,7 +1292,7 @@ headerbar spinbutton:not(.vertical) > entry + button:not(:active):hover {
   .primary-toolbar combobox > .linked > button.combo:hover, headerbar combobox > .linked > button.combo:hover {
     color: rgba(82, 93, 118, 0.8);
     border-color: #4285F4;
-    background-color: #dfe0e4;
+    background-color: rgba(247, 247, 247, 0.9);
     box-shadow: none; }
   .primary-toolbar combobox > .linked > button.combo:disabled, headerbar combobox > .linked > button.combo:disabled {
     color: rgba(82, 93, 118, 0.35);
@@ -1587,16 +1592,34 @@ popover.background {
   popover.background > .inline-toolbar {
     border-style: none;
     background-color: transparent; }
+  popover button:not(.suggested-action):not(.destructive-action):hover,
+  popover.background button:not(.suggested-action):not(.destructive-action):hover {
+    background-color: #e6e6e6;
+    color: #5c616c; }
+  popover button:not(.suggested-action):not(.destructive-action):checked,
+  popover.background button:not(.suggested-action):not(.destructive-action):checked {
+    background-color: #4285F4;
+    color: #ffffff; }
+  popover button:not(.suggested-action):not(.destructive-action):active,
+  popover.background button:not(.suggested-action):not(.destructive-action):active {
+    background-color: #4285F4;
+    color: #ffffff; }
   popover.menu button:hover,
   popover button.model:hover,
   popover.background.menu button:hover,
   popover.background button.model:hover {
-    background-color: #4285F4;
-    color: #ffffff; }
+    background-color: #e6e6e6;
+    color: #5c616c; }
   popover.menu button:checked,
   popover button.model:checked,
   popover.background.menu button:checked,
   popover.background button.model:checked {
+    background-color: #4285F4;
+    color: #ffffff; }
+  popover.menu button:active,
+  popover button.model:active,
+  popover.background.menu button:active,
+  popover.background button.model:active {
     background-color: #4285F4;
     color: #ffffff; }
 
@@ -2646,7 +2669,7 @@ infobar {
       color: #4285F4;
       background-color: #ffffff; }
 
-.selection-mode.primary-toolbar button:hover, headerbar.selection-mode button:hover, row:selected button, infobar.info button, infobar.question button, infobar.warning button, infobar.error button, .nautilus-window .floating-bar button {
+row:selected button, infobar.info button, infobar.question button, infobar.warning button, infobar.error button, .nautilus-window .floating-bar button {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0.5); }
@@ -3521,7 +3544,7 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   .marlin-pathbar.pathbar:focus {
     color: rgba(82, 93, 118, 0.8);
     border-color: #4285F4;
-    background-color: #dfe0e4; }
+    background-color: rgba(247, 247, 247, 0.9); }
   .marlin-pathbar.pathbar:disabled {
     color: rgba(82, 93, 118, 0.35);
     border-color: rgba(82, 93, 118, 0.1);
