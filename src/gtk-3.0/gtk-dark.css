@@ -848,12 +848,12 @@ toolbar, .inline-toolbar {
     margin-right: 0; }
 
 .primary-toolbar:not(.libreoffice-toolbar) {
-  color: #ffffff;
+  color: #D3DAE3;
   background-color: transparent;
   box-shadow: none;
-  border-width: 0 0 0 0;
+  border-width: 0 0 1px 0;
   border-style: solid;
-  border-image: linear-gradient(to bottom, #2f343f, rgba(32, 35, 43, 0.95)) 1 0 1 0; }
+  border-image: linear-gradient(to bottom, #313541, #313541) 1 0 1 0; }
 
 .inline-toolbar {
   background-color: #313541;
@@ -1088,13 +1088,13 @@ headerbar .linked:not(.vertical).path-bar > button {
   background-color: transparent; }
   headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
   headerbar .linked:not(.vertical).path-bar > button:hover {
-    margin: 1px 0 1px 0;
+    margin: 0;
     color: rgba(207, 218, 231, 0.8);
     background-color: rgba(58, 64, 78, 0.95); }
   headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
   headerbar .linked:not(.vertical).path-bar > button:active,
   headerbar .linked:not(.vertical).path-bar > button:checked {
-    margin: 1px 0 1px 0;
+    margin: 0;
     transition: background-color 0.00001s 0.3s;
     animation: header_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1);
     color: rgba(157, 178, 205, 0.8);

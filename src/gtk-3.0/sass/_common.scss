@@ -945,13 +945,12 @@ toolbar {
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) {  // LO messes up the toolbar styling, so exclude LO toolbars
-  color: $selected_fg_color;
+  color: $text_color;
   background-color: transparent;
   box-shadow: none;
-  border-width: 0 0 0 0;
+  border-width: 0 0 1px 0;
   border-style: solid;
-  border-image: linear-gradient(to bottom, opacify($header_bg, 1),
-                                           darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
+  border-image: linear-gradient(to bottom, opacify($button_border, 0.9), $button_border) 1 0 1 0; //temporary hack for rhythmbox 3.1
 
   //&:backdrop { background-color: opacify($header_bg_backdrop, 1); }
 
@@ -1267,13 +1266,13 @@ headerbar {
     background-color: transparent;
 
       &:hover {
-          margin: 1px 0 1px 0;
+          margin: 0;
           color: $header_fg;
           background-color: lighten($header_bg, 5%);
         }
 
       &:active, &:checked { 
-          margin: 1px 0 1px 0;
+          margin: 0;
           transition: background-color 0.00001s 0.3s;
           animation: header_ripple_effect 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
           color: if($darker == 'true', $header_fg, darken($header_fg, 15%)); 
