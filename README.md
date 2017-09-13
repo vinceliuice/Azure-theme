@@ -31,6 +31,7 @@ Search for the engines in your distributions repository or install the engines f
 Open the terminal at current directory.
 
 Run
+
         ./Install
 
 ## Screenshots
@@ -53,7 +54,12 @@ Run
 Blue Paper icon theme for Azure, you can 
 
 Run
-        ./Install Paper-Azure
 
-to get the Azure color version of Paper icon theme.
+        ./Install-Paper-Azure
+
+to get the Azure color version of Paper icon theme online.
+    
+Or you can download here:
+
+    https://github.com/vinceliuice/Azure-theme/blob/imgs/Paper-Azure.tar.xz
 
