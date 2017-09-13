@@ -59,7 +59,5 @@ Run
 
 to get the Azure color version of Paper icon theme online.
     
-Or you can download here:
-
-    https://github.com/vinceliuice/Azure-theme/blob/imgs/Paper-Azure.tar.xz
+Or you can download here: https://github.com/vinceliuice/Azure-theme/blob/imgs/Paper-Azure.tar.xz
 
