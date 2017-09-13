@@ -30,12 +30,8 @@ Search for the engines in your distributions repository or install the engines f
 
 Open the terminal at current directory.
 
-
 Run
-
-
-    ./Install
-
+        ./Install
 
 ## Screenshots
 
@@ -52,3 +48,12 @@ Run
 
 #### Wallpaper
 ![06](https://github.com/vinceliuice/Azure-theme/blob/imgs/wallpaper.jpg?raw=true) 
+
+#### Icon Theme
+Blue Paper icon theme for Azure, you can 
+
+Run
+        ./Install Paper-Azure
+
+to get the Azure color version of Paper icon theme.
+
