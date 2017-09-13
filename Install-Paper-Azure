@@ -30,3 +30,4 @@ cp -ur Paper $DEST_DIR/Paper-Azure;
 update-icon-caches $DEST_DIR/Paper-Azure; 
 gsettings set org.gnome.desktop.interface icon-theme Paper-Azure; 
 notify-send "All done!" "Enjoy the Paper-Azure!" -i face-smile
+
