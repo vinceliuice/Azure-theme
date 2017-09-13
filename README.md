@@ -34,6 +34,18 @@ Run
 
         ./Install
 
+#### Icon Theme
+
+Blue Paper icon theme for Azure 
+
+Run
+
+        ./Install-Paper-Azure
+
+to get the Azure color version of Paper icon theme online.
+    
+Or you can download here: https://github.com/vinceliuice/Azure-theme/blob/imgs/Paper-Azure.tar.xz
+
 ## Screenshots
 
 ### GNOME Shell
@@ -49,15 +61,3 @@ Run
 
 #### Wallpaper
 ![06](https://github.com/vinceliuice/Azure-theme/blob/imgs/wallpaper.jpg?raw=true) 
-
-#### Icon Theme
-Blue Paper icon theme for Azure, you can 
-
-Run
-
-        ./Install-Paper-Azure
-
-to get the Azure color version of Paper icon theme online.
-    
-Or you can download here: https://github.com/vinceliuice/Azure-theme/blob/imgs/Paper-Azure.tar.xz
-
