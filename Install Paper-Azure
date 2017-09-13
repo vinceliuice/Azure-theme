@@ -1,0 +1,32 @@
+#!/bin/bash
+
+ROOT_UID=0
+DEST_DIR=
+
+# Destination directory
+if [ "$UID" -eq "$ROOT_UID" ]; then
+  DEST_DIR="/usr/share/icons"
+else
+  DEST_DIR="$HOME/.icons"
+fi
+
+notify-send "Paper-Azure" "Getting the Paper-Azure..." -i system-software-update; 
+cd /tmp/; 
+rm -Rf $DEST_DIR/Paper-Azure 2>/dev/null; 
+rm -Rf /tmp/paper-icon-theme.zip 2>/dev/null; 
+rm -Rf /tmp/paper-icon-theme-master/ 2>/dev/null; 
+wget https://github.com/snwh/paper-icon-theme/archive/master.zip -O paper-icon-theme.zip; 
+unzip paper-icon-theme.zip; 
+cd paper-icon-theme-master/src/bitmaps/places; 
+sed -i "s/90a4ae/5679f4/g" folders.svg folders-extra.svg; 
+sed -i "s/78909c/3367d6/g" folders.svg folders-extra.svg; 
+sed -i "s/03a9f4/6686da/g" desktops.svg workspaces.svg; 
+cd /tmp/paper-icon-theme-master/src; 
+
+notify-send "Please wait!" "It is re-exporting pngs for Paper-Azure..." -i system-software-update; 
+./render-bitmaps.py; 
+cd /tmp/paper-icon-theme-master; 
+cp -ur Paper $DEST_DIR/Paper-Azure; 
+update-icon-caches $DEST_DIR/Paper-Azure; 
+gsettings set org.gnome.desktop.interface icon-theme Paper-Azure; 
+notify-send "All done!" "Enjoy the Paper-Azure!" -i face-smile
