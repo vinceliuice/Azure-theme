@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=update-azure-online
+Name[zh_CN]=在线更新Azure
+Icon=preferences-desktop-theme
+Exec=bash -c 'notify-send "Azure Theme" "Getting the latest version of the Azure theme..." -i system-software-update; cd /tmp/; rm -Rf /tmp/Azure-theme.zip 2>/dev/null; rm -Rf /tmp/Azure-theme-master/ 2>/dev/null; wget https://github.com/vinceliuice/Azure-theme/archive/master.zip -O Azure-theme.zip; unzip Azure-theme.zip; cd Azure-theme-master; ./Install; notify-send "All done!" "Enjoy the latest version of Azure-theme!" -i face-smile'
+
