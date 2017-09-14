@@ -1131,7 +1131,7 @@ headerbar {
 
   > separator { background-image: _solid($header_border); }
 
-    @extend %titlebar;
+  @extend %titlebar;
 }
 
 %header_separator {
@@ -1261,7 +1261,8 @@ headerbar {
   .linked:not(.vertical).path-bar {
 
     > button {
-    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-bottom: 6px;
     margin: 0;
     color: transparentize($header_fg, 0.2);
     background-color: transparent;
@@ -1781,7 +1782,7 @@ popover.background {
         color: $selected_fg_color;
     }
    }
-    
+
   &.menu button,
   button.model {
 
@@ -1799,9 +1800,7 @@ popover.background {
       background-color: $selected_bg_color;
       color: $selected_fg_color;
     }
-
   }
-
 }
 
 //touch selection handlebars for the Popover.osd above
