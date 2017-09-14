@@ -731,7 +731,7 @@ modelbutton.flat arrow.right {
 *:link, button:link, button:visited {
   color: #a2c3fa; }
   *:link:visited, button:visited {
-    color: #72a4f7; }
+    color: #a280ff; }
     *:selected *:link:visited, *:selected button:visited:link, *:selected button:visited {
       color: #b3cefb; }
   *:link:hover, button:hover:link, button:hover:visited {
