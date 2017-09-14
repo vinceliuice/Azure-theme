@@ -1077,7 +1077,7 @@ headerbar,
     padding: 0 0;
     background-color: opacify($header_bg, 1);
     border-bottom-width: 0;
-    box-shadow: none;
+//    box-shadow: none;
     .maximized & { background-color: opacify($header_bg, 1); }
   }
 
@@ -1744,7 +1744,7 @@ popover.background {
   background-clip: border-box;
   background-color: $_popover_bg;
 
-  box-shadow: 0 2px 6px 1px if($variant=='light', transparentize(black, 0.93), transparentize(black, 0.65));
+  box-shadow: 0 2px 6px 0 if($variant=='light', transparentize(black, 0.93), transparentize(black, 0.85));
 
   .csd &, & { border: 1px solid darken($borders_color, 5%); }
 
@@ -3199,7 +3199,7 @@ decoration {
   border-radius: if($darker=='false' and $variant=='light', 2px 2px 0 0, 2px 2px 0 0);
   border-width: 0px;
 
-  $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.45));
+  $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.8));
 
   box-shadow: 0 0 0 0 if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
               0 8px 8px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
@@ -3219,10 +3219,10 @@ decoration {
   .fullscreen &,
   .tiled & {
     border-radius: 0;
-    box-shadow: none;
+//    box-shadow: none;
   }
   .popup & {
-    box-shadow: none;
+//   box-shadow: none;
     border-radius: 0;
   }
   // server-side decorations as used by mutter
@@ -3239,7 +3239,7 @@ decoration {
   }
   tooltip.csd & {
     border-radius: 2px;
-    box-shadow: 0 1px 3px 1px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.3));
+    box-shadow: 0 1px 3px 0 if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.3));
   }
   messagedialog.csd & {
     border-radius: 3px;
