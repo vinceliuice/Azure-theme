@@ -14,7 +14,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="more-results.svg">
   <defs
      id="defs4" />
@@ -26,16 +26,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="51.125"
-     inkscape:cx="-2.7481663"
+     inkscape:cx="0.55745717"
      inkscape:cy="8"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:window-width="1366"
-     inkscape:window-height="712"
+     inkscape:window-height="700"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="32"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -59,7 +59,7 @@
      id="layer1"
      transform="translate(0,-1036.3622)">
     <circle
-       style="fill:#2eb398;fill-opacity:1;stroke:none"
+       style="fill:#0caaf0;fill-opacity:1;stroke:none"
        id="path4138"
        cx="8"
        cy="1044.3622"

@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="42.666668"
-   height="21.333334"
+   width="40"
+   height="20"
    viewBox="0 0 40 20"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="toggle-off.svg">
   <defs
      id="defs4" />
@@ -25,28 +25,24 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.65625"
-     inkscape:cx="36.766647"
-     inkscape:cy="17.49172"
+     inkscape:zoom="34.625"
+     inkscape:cx="20"
+     inkscape:cy="10"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      width="40px"
-     inkscape:window-width="1366"
-     inkscape:window-height="712"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true">
     <inkscape:grid
        type="xygrid"
-       id="grid4136"
-       originx="0"
-       originy="0"
-       spacingx="1"
-       spacingy="1" />
+       id="grid4136" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -56,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,7 +62,7 @@
      id="layer1"
      transform="translate(0,-1032.3622)">
     <rect
-       style="opacity:1;fill:#db5b5b;fill-opacity:1;stroke:none"
+       style="stroke:none;fill:#000000;fill-opacity:0.8;opacity:0.3"
        id="rect4140"
        width="36"
        height="16"
