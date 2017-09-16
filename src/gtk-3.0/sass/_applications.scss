@@ -160,7 +160,7 @@ $disk_space_free: darken($bg_color, 3%);
     color: $header_fg;
     background-color: $header_bg;
 
-      &:hover { color: $selected_fg_color; background-color: lighten($header_bg, 8%); }
+      &:hover { color: $header_fg; background-color: lighten($header_bg, 8%); }
       &:active, &:checked { 
           transition: background-color 0.00001s 0.3s;
           animation: header_ripple_effect 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);

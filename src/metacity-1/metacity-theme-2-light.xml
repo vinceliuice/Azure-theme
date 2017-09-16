@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Matcha</name>
+	<name>Azure</name>
 	<author>VinceLiuice</author>
 	<copyright>VinceLiuice</copyright>
 	<date>2017</date>
-	<description>Matcha Metacity theme</description>
+	<description>Azure Metacity theme</description>
 </info>
 
 <!-- meaningfull constants -->
 
-<constant name="C_title_focused" value="#f3f3f3" />
-<constant name="C_title_unfocused" value="#d3d7cf" />
+<constant name="C_title_focused" value="#5c616c" />
+<constant name="C_title_unfocused" value="#7C8395" />
 
-<constant name="C_wm_bg_focused" value="#1b2224" />
-<constant name="C_wm_bg_unfocused" value="#1b2224" />
+<constant name="C_wm_bg_focused" value="#e7e8eb" />
+<constant name="C_wm_bg_unfocused" value="#e7e8eb" />
 
-<constant name="C_wm_highlight" value="#2a3839" />
+<constant name="C_wm_highlight" value="#fefefe" />
 
 <!-- window button colors -->
 
@@ -25,18 +25,18 @@
 <constant name="C_button_close_bg_hover" value="#d7787d" />
 <constant name="C_button_close_bg_active" value="#be3841" />
 
-<constant name="C_icon_close_bg" value="#2f343f" />
+<constant name="C_icon_close_bg" value="#e7e8eb" />
 
 <!-- minimize, maximize -->
-<constant name="C_button_bg_hover" value="#455c50" />
-<constant name="C_button_bg_active" value="#2eb398" />
+<constant name="C_button_bg_hover" value="#558BFF" />
+<constant name="C_button_bg_active" value="#2559CA" />
 
-<constant name="C_button_border_hover" value="#26322e" />
+<constant name="C_button_border_hover" value="#4C7EEA" />
 
-<constant name="C_icon_bg_focused" value="#909b97" />
-<constant name="C_icon_bg_unfocused" value="#66746f" />
-<constant name="C_icon_bg_hover" value="#c4ccca" />
-<constant name="C_icon_bg_active" value="#2eb398" />
+<constant name="C_icon_bg_focused" value="#5c616c" />
+<constant name="C_icon_bg_unfocused" value="#7C8395" />
+<constant name="C_icon_bg_hover" value="#FFFFFF" />
+<constant name="C_icon_bg_active" value="#FFFFFF" />
 
 <!-- geometries -->
 
