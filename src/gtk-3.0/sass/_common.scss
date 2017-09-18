@@ -1257,7 +1257,7 @@ headerbar {
   }
 
   // special case for path-bars and stack-switchers
-  .linked:not(.vertical):not(.path-bar).stack-switcher,
+//  .linked:not(.vertical):not(.path-bar).stack-switcher,
   .linked:not(.vertical).path-bar {
 
     > button {
@@ -1289,6 +1289,18 @@ headerbar {
     }
     @include pathbar_linking_rules($sep_color:$header_button_border);
   }
+
+  .linked:not(.vertical):not(.path-bar).stack-switcher {
+    > button {
+      @include button(header-hover);
+      background-color: lighten($header_bg, 5%);
+      &:hover { background-color: lighten($header_bg, 10%); }
+      &:active, &:checked { @include button(header-active); background-color: if($darker == 'true', darken($header_bg, 10%), $selected_bg_color); }
+      &:disabled { color: transparentize($header_fg, 0.4); }
+
+      &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
+    }
+ }
 
   // use linking rules for entries only
   .linked:not(.vertical):not(.path-bar) {
