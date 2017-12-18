@@ -1256,8 +1256,7 @@ headerbar {
     > #{$_uncolored_button}:disabled + #{$_uncolored_button}:not(:hover) { box-shadow: none; }
   }
 
-  // special case for path-bars and stack-switchers
-//  .linked:not(.vertical):not(.path-bar).stack-switcher,
+  // special case for path-bars
   .linked:not(.vertical).path-bar {
 
     > button {
@@ -1268,13 +1267,11 @@ headerbar {
     background-color: transparent;
 
       &:hover {
-          margin: 0;
           color: $header_fg;
           background-color: lighten($header_bg, 5%);
         }
 
-      &:active, &:checked { 
-          margin: 0;
+      &:active, &:checked {
           transition: background-color 0.00001s 0.3s;
           animation: header_ripple_effect 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
           color: if($darker == 'true', $header_fg, darken($header_fg, 15%)); 
@@ -1289,18 +1286,6 @@ headerbar {
     }
     @include pathbar_linking_rules($sep_color:$header_button_border);
   }
-
-  .linked:not(.vertical):not(.path-bar).stack-switcher {
-    > button {
-      @include button(header-hover);
-      background-color: lighten($header_bg, 5%);
-      &:hover { background-color: lighten($header_bg, 10%); }
-      &:active, &:checked { @include button(header-active); background-color: if($darker == 'true', darken($header_bg, 10%), $selected_bg_color); }
-      &:disabled { color: transparentize($header_fg, 0.4); }
-
-      &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
-    }
- }
 
   // use linking rules for entries only
   .linked:not(.vertical):not(.path-bar) {
@@ -1449,6 +1434,20 @@ headerbar {
     }
   }
 }
+
+
+  // special case for stack-switchers
+  .linked:not(.vertical):not(.path-bar).stack-switcher {
+    > button {
+      @include button(header-hover);
+      background-color: lighten($header_bg, 5%);
+      &:hover { background-color: lighten($header_bg, 10%); }
+      &:active, &:checked { @include button(header-active); background-color: if($darker == 'true', lighten($header_bg, 15%), $selected_bg_color); }
+      &:disabled { color: transparentize($header_fg, 0.4); }
+
+      &, &:hover, &:active, &:checked, &:disabled { @extend %linked; border-color: gtkalpha(#000, 0.1); border-width: 1px; }
+    }
+ }
 
 //
 // Pathbars
@@ -1666,7 +1665,7 @@ menu,
 
   .csd & {
     padding: 4px 0px;
-    border-radius: 0;
+    border-radius: 2px;
   }
 
   separator,
@@ -3209,22 +3208,22 @@ stackswitcher button {
 
 decoration {
   border-radius: if($darker=='false' and $variant=='light', 2px 2px 0 0, 2px 2px 0 0);
-  border-width: 0px;
+  border-width: 0;
 
   $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.8));
 
   box-shadow: 0 0 0 0 if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
-              0 8px 8px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
+              0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22), 0 16px 16px transparent;
 
   // this is used for the resize cursor area
-  margin: 10px;
+  margin: 8px;
 
   &:backdrop {
     // the transparent shadow here is to enforce that the shadow extents don't
     // change when we go to backdrop, to prevent jumping windows
     box-shadow: 0 0 0 0 if($darker=='true' or $variant == 'dark', transparentize(darken($header_bg, 7%), 0.1), $_wm_border),
-                0 8px 8px 0 transparent,
-                0 5px 5px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
+                0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), 0 16px 16px transparent;
+
 
     transition: $backdrop_transition;
   }
@@ -3320,6 +3319,7 @@ headerbar,
 
   }
 }
+
 // catch all extend
 %selected_items {
   background-color: $selected_bg_color;
