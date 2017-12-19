@@ -1,7 +1,12 @@
-
-## Azure Gtk Theme
+<img src="https://github.com/vinceliuice/Azure-theme/blob/imgs/logo.png" alt="Logo" align="right" /> Azure Gtk Theme
+======
 
 Azure is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Pantheon, XFCE, Mate, etc.
+
+## Donations
+[![paypal](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png "Donations")](https://www.paypal.me/vinceliuice) 
+
+Thanks for your donations! https://www.paypal.me/vinceliuice
 
 ## Info
 
@@ -33,6 +38,18 @@ Open the terminal at current directory.
 Run
 
         ./Install
+
+When running the installer script in ubuntu16.04 or later, if you had this error:
+
+    XMLLINT not set and xmllint not found in path; skipping xml preprocessing.
+
+To fix it you have to install libxml2-utils
+
+    sudo apt install libxml2-utils
+
+When running the installer script in Fedora 24 or later, you need to install 'glib2-devel'.
+
+    sudo dnf install glib2-devel
 
 ### Icon Theme
 
