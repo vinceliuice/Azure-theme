@@ -860,7 +860,7 @@ headerbar,
   padding: 0 10px;
   color: #FFFFFF;
   background-color: #3367d6;
-  box-shadow: inset 0 -1px rgba(41, 93, 204, 0.95), inset 0 1px rgba(85, 128, 221, 0.95), 0 1px 3px rgba(32, 73, 161, 0.65); }
+  box-shadow: inset 0 0 rgba(41, 93, 204, 0.95), inset 0 1px rgba(85, 128, 221, 0.95), 0 1px 3px rgba(32, 73, 161, 0.65); }
   .csd headerbar, .csd
   .titlebar:not(headerbar) {
     background-color: rgba(51, 103, 214, 0.95);
@@ -1507,23 +1507,19 @@ menu,
         margin-right: 2px; }
   menu > arrow,
   .menu > arrow {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
     min-width: 16px;
     min-height: 16px;
     padding: 4px;
     background-color: #ffffff;
-    border-radius: 0; }
+    border-radius: 0;
+    border: 1px solid #d9dde0; }
     menu > arrow.top,
     .menu > arrow.top {
-      margin-top: -6px;
-      border-bottom: 1px solid #ededef;
+      margin-top: -12px;
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
     menu > arrow.bottom,
     .menu > arrow.bottom {
-      margin-bottom: -6px;
-      border-top: 1px solid #ededef;
+      margin-bottom: -12px;
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     menu > arrow:hover,
     .menu > arrow:hover {
@@ -3402,6 +3398,78 @@ button.documents-favorite:active:hover {
 #gf-candidate-popup levelbar trough {
   background: none; }
 
+headerbar > button.flat.popup.title-menu-button.toggle, headerbar > button.popup.title-menu-button.toggle.sidebar-button {
+  border-radius: 2px;
+  -gtk-outline-radius: 2px; }
+  headerbar > button.flat.popup.title-menu-button.toggle > grid .title, headerbar > button.popup.title-menu-button.toggle.sidebar-button > grid .title {
+    margin: rem(-2.7px) 0;
+    padding: rem(1.3px) rem(13.3px) 0;
+    font-size: 90%; }
+  headerbar > button.flat.popup.title-menu-button.toggle > grid .subtitle, headerbar > button.popup.title-menu-button.toggle.sidebar-button > grid .subtitle {
+    margin: rem(-2.7px) 0;
+    padding: 0 rem(13.3px) rem(1.3px);
+    font-size: 80%; }
+
+window.background > box.vertical box.horizontal list.categories {
+  background-color: #F5F6F7;
+  border: none;
+  color: #4a4f5a; }
+  window.background > box.vertical box.horizontal list.categories row.activatable.category {
+    color: #4a4f5a;
+    background-color: transparent;
+    font-weight: 500; }
+    window.background > box.vertical box.horizontal list.categories row.activatable.category:hover {
+      color: #4a4f5a;
+      background-color: rgba(74, 79, 90, 0.08); }
+    window.background > box.vertical box.horizontal list.categories row.activatable.category:selected {
+      color: #ffffff;
+      background-color: #4285F4; }
+      window.background > box.vertical box.horizontal list.categories row.activatable.category:selected label {
+        color: #ffffff; }
+    window.background > box.vertical box.horizontal list.categories row.activatable.category > label {
+      padding-left: 0;
+      padding-right: 0; }
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list > separator {
+  background-color: transparent; }
+  window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list > separator.compressed-rows-group-separator {
+    background-image: image(#d9dde0); }
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable {
+  color: #4a4f5a;
+  transition-duration: 0.1s; }
+  window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable:active {
+    color: #4a4f5a; }
+  window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable label.compressed-entries-label {
+    background-image: image(#2eb398);
+    color: #ffffff;
+    font-weight: 700; }
+  window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row {
+    background-image: image(#edeef0);
+    color: #1c1e22;
+    transition-property: opacity, border-image, background-image, box-shadow; }
+    window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row:hover {
+      background-image: image(#eceeef);
+      color: #4a4f5a; }
+    window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row:active:focus {
+      background-image: image(#e4e5e7);
+      color: #4a4f5a;
+      animation: none; }
+    window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row.popover-activated-row {
+      background-image: image(#4285F4);
+      color: #ffffff; }
+    window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header {
+      background-image: image(#ffffff);
+      color: #4285F4; }
+      window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:hover {
+        background-image: image(#f6f9fe); }
+      window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:active:focus {
+        background-image: image(#ecf3fe);
+        color: #4285F4;
+        animation: none; }
+      window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header label.compressed-entries-label {
+        background-image: image(#4285F4);
+        color: #ffffff;
+        transition-duration: 0s; }
+
 #gf-input-source {
   min-height: 32px;
   min-width: 40px; }
@@ -3600,18 +3668,18 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
 /****************
  * Libre-Office *
  ****************/
-window.background > grid.horizontal > grid.horizontal {
+window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal {
   background-color: rgba(51, 103, 214, 0.95); }
-  window.background > grid.horizontal > grid.horizontal > button.flat.small-button, window.background > grid.horizontal > grid.horizontal > button.small-button.sidebar-button {
+  window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button {
     color: #FFFFFF;
     border: none; }
-    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:hover, window.background > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:hover {
+    window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:hover, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:hover {
       background-color: rgba(115, 150, 227, 0.95);
       color: white; }
-    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:active, window.background > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:active, window.background > grid.horizontal > grid.horizontal > button.flat.small-button:checked, window.background > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:checked {
+    window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:active, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:active, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:checked, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:checked {
       background-color: #4285F4;
       color: white; }
-    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:disabled, window.background > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:disabled {
+    window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:disabled, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:disabled {
       color: alpha(#FFFFFF,0.6); }
 
 window.background:not(.solid-csd) > notebook:not(.frame) {
