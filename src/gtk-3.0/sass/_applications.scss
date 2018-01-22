@@ -574,54 +574,8 @@ button.documents-favorite:active:hover {
 //
 
 // titles inside the button!?
-headerbar > button.flat.popup.title-menu-button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
-
-  > grid {
-    .title {
-      margin: rem(-2.7px) 0;
-      padding: rem(1.3px) rem(13.3px) 0;
-      font-size: 90%;
-    }
-    .subtitle {
-      margin: rem(-2.7px) 0;
-      padding: 0 rem(13.3px) rem(1.3px);
-      font-size: 80%;
-    }
-  }
-}
 
 window.background > box.vertical box.horizontal {
-  list.categories { // side-pane
-    background-color: $bg_color;
-    border: none;
-    color: $fg_color;
-
-    row.activatable.category { // use side-bar styling
-      // paddings in row were hard-coded with crazy large values...
-      // padding: rem(2.7px) rem(8px) rem(4px);
-      color: $fg_color;
-      background-color: transparent;
-      font-weight: 500;
-      &:hover {
-          color: $fg_color;
-          background-color: rgba($fg_color, 0.08);
-        }
-
-      &:selected {
-        color: $selected_fg_color;
-        background-color: $selected_bg_color;
-
-        label { color: $selected_fg_color; }
-      }
-
-      > label {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-  }
 
   > box.vertical > scrolledwindow > viewport.frame > list { // right-pane
     > separator {

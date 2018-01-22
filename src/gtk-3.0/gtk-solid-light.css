@@ -3402,37 +3402,6 @@ button.documents-favorite:active:hover {
 #gf-candidate-popup levelbar trough {
   background: none; }
 
-headerbar > button.flat.popup.title-menu-button.toggle, headerbar > button.popup.title-menu-button.toggle.sidebar-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px; }
-  headerbar > button.flat.popup.title-menu-button.toggle > grid .title, headerbar > button.popup.title-menu-button.toggle.sidebar-button > grid .title {
-    margin: rem(-2.7px) 0;
-    padding: rem(1.3px) rem(13.3px) 0;
-    font-size: 90%; }
-  headerbar > button.flat.popup.title-menu-button.toggle > grid .subtitle, headerbar > button.popup.title-menu-button.toggle.sidebar-button > grid .subtitle {
-    margin: rem(-2.7px) 0;
-    padding: 0 rem(13.3px) rem(1.3px);
-    font-size: 80%; }
-
-window.background > box.vertical box.horizontal list.categories {
-  background-color: #F5F6F7;
-  border: none;
-  color: #4a4f5a; }
-  window.background > box.vertical box.horizontal list.categories row.activatable.category {
-    color: #4a4f5a;
-    background-color: transparent;
-    font-weight: 500; }
-    window.background > box.vertical box.horizontal list.categories row.activatable.category:hover {
-      color: #4a4f5a;
-      background-color: rgba(74, 79, 90, 0.08); }
-    window.background > box.vertical box.horizontal list.categories row.activatable.category:selected {
-      color: #ffffff;
-      background-color: #4285F4; }
-      window.background > box.vertical box.horizontal list.categories row.activatable.category:selected label {
-        color: #ffffff; }
-    window.background > box.vertical box.horizontal list.categories row.activatable.category > label {
-      padding-left: 0;
-      padding-right: 0; }
 window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list > separator {
   background-color: transparent; }
   window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list > separator.compressed-rows-group-separator {
