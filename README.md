@@ -6,11 +6,6 @@ Azure is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK
 This theme is based on Arc gtk theme of horst3180. Thanks horst3180 sincerely for his great job! 
 horst3180 - Arc gtk theme: https://github.com/horst3180/Arc-theme
 
-## Donations
-[![paypal](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png "Donations")](https://www.paypal.me/vinceliuice) 
-
-Thanks for your donations! https://www.paypal.me/vinceliuice
-
 ## Info
 
 ### GTK+ 3.20 or later
