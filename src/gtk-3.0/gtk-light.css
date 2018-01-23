@@ -77,8 +77,6 @@ popover.background label.separator {
 label selection {
   color: #ffffff;
   background-color: #4285F4; }
-label:disabled {
-  color: rgba(74, 79, 90, 0.55); }
 
 .dim-label, label.separator, popover label.separator,
 popover.background label.separator, headerbar .subtitle,

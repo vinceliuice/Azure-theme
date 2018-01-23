@@ -125,8 +125,6 @@ label {
   }
 
   &:disabled {
-    color: $insensitive_fg_color;
-
     selection { @extend %selected_items:disabled; }
   }
 }
