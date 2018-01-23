@@ -77,6 +77,8 @@ popover.background label.separator {
 label selection {
   color: #ffffff;
   background-color: #4285F4; }
+label:disabled {
+  color: rgba(74, 79, 90, 0.55); }
 
 .dim-label, label.separator, popover label.separator,
 popover.background label.separator, headerbar .subtitle,
@@ -1451,6 +1453,9 @@ menubar,
     .menubar > menuitem:disabled {
       color: rgba(66, 76, 98, 0.2);
       border-color: transparent; }
+    menubar > menuitem label:disabled,
+    .menubar > menuitem label:disabled {
+      color: rgba(66, 76, 98, 0.2); }
 
 menu,
 .menu {

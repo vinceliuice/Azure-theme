@@ -125,6 +125,7 @@ label {
   }
 
   &:disabled {
+    color: $insensitive_fg_color;
     selection { @extend %selected_items:disabled; }
   }
 }
@@ -1649,6 +1650,9 @@ menubar,
       color: transparentize($header_fg, 0.6);
       border-color: transparent;
     }
+
+    label { &:disabled { color: transparentize($header_fg, 0.6); } }
+
   }
 }
 
