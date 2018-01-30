@@ -3219,7 +3219,7 @@ decoration {
               0 8px 8px 0 if($variant == 'light', opacify($_wm_border, 0.1), opacify($_wm_border, 0.05));
 
   // this is used for the resize cursor area
-  margin: 6px;
+  margin: 4px;
 
   &:backdrop {
     // the transparent shadow here is to enforce that the shadow extents don't
@@ -3235,8 +3235,9 @@ decoration {
   }
   // server-side decorations as used by mutter
   .ssd & {
+    margin: 3px;
     border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
-    box-shadow: 0 0 0 0 if($darker=='true' or $variant == 'dark', transparentize(black, 0.35), $_wm_border);
+    box-shadow: 0 0 3px 0 if($variant == 'light', opacify($_wm_border, 0.06), opacify($_wm_border, 0.03));
 
     &.maximized { border-radius: 0; }
   }
