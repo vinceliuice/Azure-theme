@@ -2931,7 +2931,8 @@ textview text selection, flowbox flowboxchild:selected, entry selection:focus, e
 modelbutton.flat:active,
 modelbutton.flat:active arrow,
 modelbutton.flat:selected,
-modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, filechooser placessidebar.sidebar row.sidebar-row.has-open-popup:selected, filechooser placessidebar.sidebar row.sidebar-row:selected, filechooser placessidebar.sidebar row.sidebar-row:selected:hover, filechooser placessidebar.sidebar row.sidebar-row:active:hover,
+modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected:focus,
+#MozillaGtkWidget.background > widget > scrolledwindow > textview text selection, filechooser placessidebar.sidebar row.sidebar-row.has-open-popup:selected, filechooser placessidebar.sidebar row.sidebar-row:selected, filechooser placessidebar.sidebar row.sidebar-row:selected:hover, filechooser placessidebar.sidebar row.sidebar-row:active:hover,
 .nautilus-window placessidebar.sidebar row.sidebar-row.has-open-popup:selected,
 .nautilus-window placessidebar.sidebar row.sidebar-row:selected,
 .nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover,
@@ -2949,7 +2950,8 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
   modelbutton.flat:active,
   modelbutton.flat:active arrow,
   modelbutton.flat:selected,
-  modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, filechooser placessidebar.sidebar row.sidebar-row.has-open-popup:selected, filechooser placessidebar.sidebar row.sidebar-row:selected, filechooser placessidebar.sidebar row.sidebar-row:selected:hover, filechooser placessidebar.sidebar row.sidebar-row:active:hover,
+  modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected:focus,
+  #MozillaGtkWidget.background > widget > scrolledwindow > textview text selection, filechooser placessidebar.sidebar row.sidebar-row.has-open-popup:selected, filechooser placessidebar.sidebar row.sidebar-row:selected, filechooser placessidebar.sidebar row.sidebar-row:selected:hover, filechooser placessidebar.sidebar row.sidebar-row:active:hover,
   .nautilus-window placessidebar.sidebar row.sidebar-row.has-open-popup:selected,
   .nautilus-window placessidebar.sidebar row.sidebar-row:selected,
   .nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover,
@@ -2965,7 +2967,8 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
     modelbutton.flat:disabled:active,
     modelbutton.flat:active arrow:disabled,
     modelbutton.flat:disabled:selected,
-    modelbutton.flat:selected arrow:disabled, treeview.view:disabled:selected:focus, row:disabled:selected, calendar:disabled:selected, .nemo-window .nemo-window-pane widget.entry:disabled:selected, filechooser placessidebar.sidebar row.sidebar-row:disabled:selected, filechooser placessidebar.sidebar row.sidebar-row:disabled:active:hover,
+    modelbutton.flat:selected arrow:disabled, treeview.view:disabled:selected:focus, row:disabled:selected, calendar:disabled:selected, .nemo-window .nemo-window-pane widget.entry:disabled:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:disabled:selected,
+    #MozillaGtkWidget.background > widget > scrolledwindow > textview text selection:disabled, filechooser placessidebar.sidebar row.sidebar-row:disabled:selected, filechooser placessidebar.sidebar row.sidebar-row:disabled:active:hover,
     .nautilus-window placessidebar.sidebar row.sidebar-row:disabled:selected,
     .nautilus-window placessidebar.sidebar row.sidebar-row:disabled:active:hover {
       color: #a1c2fa; }
@@ -3634,6 +3637,74 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
 .panel .menu .spinner,
 .menu .spinner {
   opacity: 1; }
+
+window.background:not(.csd) > widget > separator {
+  color: #d9dde0; }
+window.background:not(.csd) > widget > scrollbar {
+  background-clip: border-box; }
+window.background:not(.csd) > widget > scrollbar,
+window.background:not(.csd) > widget > frame > border {
+  border-color: rgba(0, 0, 0, 0.15); }
+window.background:not(.csd) > widget > entry,
+window.background:not(.csd) > widget > button > button {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px; }
+window.background:not(.csd) > widget > entry {
+  border-radius: 2px;
+  background-image: image(#ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.15); }
+  window.background:not(.csd) > widget > entry:focus {
+    border-color: #4285F4; }
+window.background:not(.csd) > widget > spinbutton {
+  background-image: image(#fbfbfc);
+  border: 1px solid rgba(0, 0, 0, 0.15); }
+  window.background:not(.csd) > widget > spinbutton:active {
+    background-image: image(#4285F4); }
+window.background:not(.csd) > menu > separator {
+  color: #d9dde0; }
+window.background:not(.csd) > menu > menuitem > label:disabled {
+  color: rgba(74, 79, 90, 0.55); }
+
+#MozillaGtkWidget.background {
+  background-color: #F5F6F7; }
+  #MozillaGtkWidget.background .background,
+  #MozillaGtkWidget.background frame,
+  #MozillaGtkWidget.background separator,
+  #MozillaGtkWidget.background scrolledwindow {
+    background-color: #F5F6F7; }
+  #MozillaGtkWidget.background scrollbar {
+    background-color: #ffffff; }
+    #MozillaGtkWidget.background scrollbar slider {
+      background-color: #a8abb0; }
+      #MozillaGtkWidget.background scrollbar slider:hover {
+        background-color: #8e9299; }
+      #MozillaGtkWidget.background scrollbar slider:hover:active {
+        background-color: #757981; }
+      #MozillaGtkWidget.background scrollbar slider:disabled {
+        background-color: transparent; }
+  #MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
+  #MozillaGtkWidget.background *:focus,
+  #MozillaGtkWidget.background *:focus button,
+  #MozillaGtkWidget.background *:active,
+  #MozillaGtkWidget.background *:active button,
+  #MozillaGtkWidget.background *:checked,
+  #MozillaGtkWidget.background *:checked button {
+    color: #4a4f5a; }
+  #MozillaGtkWidget.background > window.background > menu {
+    background-color: #ffffff; }
+    #MozillaGtkWidget.background > window.background > menu > separator {
+      padding: 0;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.15); }
+  #MozillaGtkWidget.background > widget border {
+    border-color: rgba(0, 0, 0, 0.15); }
+  #MozillaGtkWidget.background > widget separator {
+    background-color: rgba(0, 0, 0, 0.15); }
+  #MozillaGtkWidget.background > widget > scrolledwindow > textview {
+    background-color: #ffffff; }
+    #MozillaGtkWidget.background > widget > scrolledwindow > textview text {
+      background-color: transparent;
+      color: #242424; }
 
 /****************
  * Libre-Office *
