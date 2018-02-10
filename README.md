@@ -66,13 +66,7 @@ Or you can download here: https://github.com/vinceliuice/Azure-theme/blob/imgs/P
 ### GNOME Shell
 
 #### Azure
-![01](https://github.com/vinceliuice/Azure-theme/blob/imgs/Azure.jpg?raw=true) 
-![03](https://github.com/vinceliuice/Azure-theme/blob/imgs/img-01.jpg?raw=true) 
-![04](https://github.com/vinceliuice/Azure-theme/blob/imgs/img-02.jpg?raw=true) 
-![05](https://github.com/vinceliuice/Azure-theme/blob/imgs/img-03.jpg?raw=true) 
-
-#### Azure-light
-![02](https://github.com/vinceliuice/Azure-theme/blob/imgs/Azure-light.jpg?raw=true) 
-
-#### Wallpaper
-![06](https://github.com/vinceliuice/Azure-theme/blob/imgs/wallpaper.jpg?raw=true) 
+![01](https://github.com/vinceliuice/Azure-theme/blob/imgs/image1.jpeg?raw=true)
+![02](https://github.com/vinceliuice/Azure-theme/blob/imgs/image2.jpeg?raw=true)
+![03](https://github.com/vinceliuice/Azure-theme/blob/imgs/image3.jpeg?raw=true)
+![04](https://github.com/vinceliuice/Azure-theme/blob/imgs/image4.jpeg?raw=true)
