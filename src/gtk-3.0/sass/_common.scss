@@ -985,7 +985,10 @@ actionbar {
 //
 // Headerbars
 //
+
 $_header_radius: if($darker=='false' and $variant=='light', 2px, 2px);
+$_header_shadow: if($darker=='false', inset 0 -1px $header_border, 0 1px 3px transparentize(darken($header_border, 10%), 0.3));
+$_header_backdrop_shadow: if($darker=='false', inset 0 -1px gtkalpha($header_border, 0.5), 0 1px 3px transparentize(darken($header_border, 3%), 0.3));
 
 headerbar,
 %titlebar {
@@ -999,9 +1002,7 @@ headerbar,
 
   color: $header_fg;
   background-color: opacify($header_bg, 1);
-  box-shadow: inset 0 0 $header_border,
-              inset 0 1px lighten($header_bg, 8%),
-              0 1px 3px transparentize(darken($header_border, 10%), 0.3);
+  box-shadow: inset 0 1px lighten($header_bg, 8%), $_header_shadow;
 
   .csd & {  // Transparent header-bars only in csd windows
     background-color: $header_bg;
@@ -1013,6 +1014,7 @@ headerbar,
 
     color: transparentize($header_fg, 0.3);
     background-color: opacify($header_bg_backdrop, 1);
+    box-shadow: $_header_backdrop_shadow;
 
     .csd & { background-color: $header_bg_backdrop; }
   }
@@ -1195,22 +1197,16 @@ headerbar {
 
   // Headerbar Buttons
   button {
-
-    color: $header_fg;
-    border: none;
-    background-color: transparent;
-
+    @include button(header-normal);
     &:backdrop { opacity: 0.7; }
-
-    &:hover { color: $header_fg; background-color: lighten($header_bg, 5%); }
+    &:hover { @include button(header-hover); }
     &:active, &:checked {
       transition: 200ms $ease-out-quad;
       @include button(header-active);
       background-clip: if($darker=='false' and $variant=='light', border-box, padding-box);
     }
 
-    &:disabled { color: transparentize($header_fg, 0.4); background-color: transparent; }
-
+    &:disabled { @include button(header-insensitive); }
     &:disabled:active, &:disabled:checked { @include button(header-insensitive-active); }
   }
 
@@ -1262,12 +1258,13 @@ headerbar {
     padding-top: 3px;
     padding-bottom: 6px;
     margin: 0;
+    border: none;
     color: transparentize($header_fg, 0.2);
     background-color: transparent;
 
       &:hover {
           color: $header_fg;
-          background-color: lighten($header_bg, 5%);
+          background-color: if($darker=='false' and $variant=='light', gtkalpha(white, 0.65), gtkalpha(white, 0.15));
         }
 
       &:active, &:checked {
@@ -1275,8 +1272,7 @@ headerbar {
           animation: header_ripple_effect 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
           color: if($darker == 'true', $header_fg, darken($header_fg, 15%)); 
           background-color: darken($header_bg, 10%); 
-          box-shadow: if($darker=='true', inset 0 -1px transparentize($header_fg, 0.2), inset 0 -1px $selected_bg_color),
-                      if($darker=='true', 0 1px transparentize($header_fg, 0.2), 0 1px $selected_bg_color);
+          box-shadow: if($darker=='true', inset 0 -2px transparentize($header_fg, 0.1), inset 0 -2px $selected_bg_color);
         }
 
       &:disabled { color: transparentize($header_fg, 0.4); }
@@ -1838,7 +1834,7 @@ notebook {
   }
 
   > header {
-    padding: 5px;
+    padding: 0 6px;
     background-color: $bg_color;
 
     &.top {
@@ -1914,7 +1910,7 @@ notebook {
         padding-#{$_bpos}: 0;
 
         > tabs > tab {
-          padding: 3px 10px 8px 10px;
+          padding: 4px 10px 6px 10px;
           min-width: 20px;
           min-height: 20px;
 
@@ -2708,7 +2704,7 @@ messagedialog { // Message Dialog styling
   .titlebar {
     min-height: 20px;
     background-color: $header_bg;
-    border-bottom: 1px solid darken($header_bg, 7%);
+//    border-bottom: 1px solid darken($header_bg, 7%);
   }
 
   .dialog-action-area button { padding: 8px; min-height: 0; }

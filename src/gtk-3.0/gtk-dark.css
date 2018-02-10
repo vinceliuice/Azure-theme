@@ -859,7 +859,7 @@ headerbar,
   padding: 0 10px;
   color: rgba(207, 218, 231, 0.8);
   background-color: #2f343f;
-  box-shadow: inset 0 0 rgba(38, 42, 51, 0.95), inset 0 1px rgba(64, 71, 86, 0.95), 0 1px 3px rgba(16, 18, 22, 0.65); }
+  box-shadow: inset 0 1px rgba(64, 71, 86, 0.95), inset 0 -1px rgba(38, 42, 51, 0.95); }
   .csd headerbar, .csd
   .titlebar:not(headerbar) {
     background-color: rgba(47, 52, 63, 0.95);
@@ -868,7 +868,8 @@ headerbar,
   .titlebar:backdrop:not(headerbar) {
     transition: 200ms ease-out;
     color: rgba(207, 218, 231, 0.5);
-    background-color: #323843; }
+    background-color: #323843;
+    box-shadow: inset 0 -1px alpha(rgba(38, 42, 51, 0.95),0.5); }
     .csd headerbar:backdrop, .csd
     .titlebar:backdrop:not(headerbar) {
       background-color: rgba(50, 56, 67, 0.95); }
@@ -1018,13 +1019,15 @@ headerbar entry, .nemo-window .primary-toolbar entry {
       color: #FC4138; }
 headerbar button, .nemo-window .primary-toolbar button {
   color: rgba(207, 218, 231, 0.8);
-  border: none;
-  background-color: transparent; }
+  outline-offset: -3px;
+  background-color: rgba(47, 52, 63, 0);
+  border-color: rgba(47, 52, 63, 0); }
   headerbar button:backdrop, .nemo-window .primary-toolbar button:backdrop {
     opacity: 0.7; }
   headerbar button:hover, .nemo-window .primary-toolbar button:hover {
     color: rgba(207, 218, 231, 0.8);
-    background-color: rgba(58, 64, 78, 0.95); }
+    border-color: transparent;
+    background-color: alpha(white,0.15); }
   headerbar button:active, .nemo-window .primary-toolbar button:active, headerbar button:checked, .nemo-window .primary-toolbar button:checked {
     transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: #ffffff;
@@ -1032,8 +1035,10 @@ headerbar button, .nemo-window .primary-toolbar button {
     background-color: #4285F4;
     background-clip: padding-box; }
   headerbar button:disabled, .nemo-window .primary-toolbar button:disabled {
-    color: rgba(207, 218, 231, 0.4);
-    background-color: transparent; }
+    background-color: rgba(47, 52, 63, 0);
+    border-color: rgba(47, 52, 63, 0); }
+    headerbar button:disabled label, .nemo-window .primary-toolbar button:disabled label, headerbar button:disabled, .nemo-window .primary-toolbar button:disabled {
+      color: rgba(207, 218, 231, 0.35); }
   headerbar button:disabled:active, .nemo-window .primary-toolbar button:disabled:active, headerbar button:disabled:checked, .nemo-window .primary-toolbar button:disabled:checked {
     color: rgba(255, 255, 255, 0.75);
     border-color: rgba(66, 133, 244, 0.65);
@@ -1066,17 +1071,18 @@ headerbar .linked:not(.vertical).path-bar > button, .nemo-window .primary-toolba
   padding-top: 3px;
   padding-bottom: 6px;
   margin: 0;
+  border: none;
   color: rgba(207, 218, 231, 0.6);
   background-color: transparent; }
   headerbar .linked:not(.vertical).path-bar > button:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:hover {
     color: rgba(207, 218, 231, 0.8);
-    background-color: rgba(58, 64, 78, 0.95); }
+    background-color: alpha(white,0.15); }
   headerbar .linked:not(.vertical).path-bar > button:active, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:active, headerbar .linked:not(.vertical).path-bar > button:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:checked {
     transition: background-color 0.00001s 0.3s;
     animation: header_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1);
     color: rgba(157, 178, 205, 0.8);
     background-color: rgba(25, 28, 34, 0.95);
-    box-shadow: inset 0 -1px #4285F4, 0 1px #4285F4; }
+    box-shadow: inset 0 -2px #4285F4; }
   headerbar .linked:not(.vertical).path-bar > button:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:disabled {
     color: rgba(207, 218, 231, 0.4); }
 headerbar .linked:not(.vertical).path-bar > button + button, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button + button {
@@ -1208,8 +1214,8 @@ headerbar spinbutton:not(.vertical):focus, .nemo-window .primary-toolbar spinbut
   caret-color: rgba(207, 218, 231, 0.8); }
 headerbar spinbutton:not(.vertical) button, .nemo-window .primary-toolbar spinbutton:not(.vertical) button, headerbar spinbutton:not(.vertical) button:disabled, .nemo-window .primary-toolbar spinbutton:not(.vertical) button:disabled {
   color: rgba(207, 218, 231, 0.8);
-  border-color: rgba(47, 52, 63, 0.95);
-  background-color: rgba(47, 52, 63, 0.95); }
+  border-color: transparent;
+  background-color: alpha(white,0.15); }
 headerbar spinbutton:not(.vertical) button:hover, .nemo-window .primary-toolbar spinbutton:not(.vertical) button:hover {
   background-color: rgba(134, 144, 165, 0.35); }
 headerbar spinbutton:not(.vertical) button:active, .nemo-window .primary-toolbar spinbutton:not(.vertical) button:active, headerbar spinbutton:not(.vertical) button:checked, .nemo-window .primary-toolbar spinbutton:not(.vertical) button:checked {
@@ -1292,8 +1298,8 @@ headerbar scale trough, .nemo-window .primary-toolbar scale trough {
 
 .linked:not(.vertical):not(.path-bar).stack-switcher > button {
   color: rgba(207, 218, 231, 0.8);
-  border-color: rgba(47, 52, 63, 0.95);
-  background-color: rgba(47, 52, 63, 0.95);
+  border-color: transparent;
+  background-color: alpha(white,0.15);
   background-color: rgba(58, 64, 78, 0.95); }
   .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover {
     background-color: rgba(69, 76, 92, 0.95); }
@@ -1603,7 +1609,7 @@ notebook {
   notebook > stack:not(:only-child) {
     background-color: #404552; }
   notebook > header {
-    padding: 5px;
+    padding: 0 6px;
     background-color: #383C4A; }
     notebook > header.top {
       border-bottom: 1px solid #313541; }
@@ -1648,7 +1654,7 @@ notebook {
     notebook > header.top {
       padding-bottom: 0; }
       notebook > header.top > tabs > tab {
-        padding: 3px 10px 8px 10px;
+        padding: 4px 10px 6px 10px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
@@ -1660,7 +1666,7 @@ notebook {
     notebook > header.bottom {
       padding-top: 0; }
       notebook > header.bottom > tabs > tab {
-        padding: 3px 10px 8px 10px;
+        padding: 4px 10px 6px 10px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
@@ -1672,7 +1678,7 @@ notebook {
     notebook > header.right {
       padding-left: 0; }
       notebook > header.right > tabs > tab {
-        padding: 3px 10px 8px 10px;
+        padding: 4px 10px 6px 10px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
@@ -1684,7 +1690,7 @@ notebook {
     notebook > header.left {
       padding-right: 0; }
       notebook > header.left > tabs > tab {
-        padding: 3px 10px 8px 10px;
+        padding: 4px 10px 6px 10px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
@@ -2478,8 +2484,7 @@ calendar {
 
 messagedialog .titlebar {
   min-height: 20px;
-  background-color: rgba(47, 52, 63, 0.95);
-  border-bottom: 1px solid rgba(32, 35, 43, 0.95); }
+  background-color: rgba(47, 52, 63, 0.95); }
 messagedialog .dialog-action-area button {
   padding: 8px;
   min-height: 0; }
@@ -2847,8 +2852,8 @@ headerbar button.titlebutton,
   headerbar button.titlebutton:hover,
   .titlebar button.titlebutton:hover {
     color: rgba(207, 218, 231, 0.8);
-    border-color: rgba(47, 52, 63, 0.95);
-    background-color: rgba(47, 52, 63, 0.95); }
+    border-color: transparent;
+    background-color: alpha(white,0.15); }
   headerbar button.titlebutton:active, headerbar button.titlebutton:checked,
   .titlebar button.titlebutton:active,
   .titlebar button.titlebutton:checked {
@@ -3039,8 +3044,8 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
 @keyframes needs_attention_keyframes {
   0% {
     color: rgba(207, 218, 231, 0.8);
-    border-color: rgba(47, 52, 63, 0.95);
-    background-color: rgba(47, 52, 63, 0.95); }
+    border-color: transparent;
+    background-color: alpha(white,0.15); }
   100% {
     color: #ffffff;
     border-color: transparent;

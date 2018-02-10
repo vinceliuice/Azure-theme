@@ -1,6 +1,6 @@
 style "menubar" {
 
-  bg[NORMAL] = "#e7e8eb"
+  bg[NORMAL] = "#f6f6fc"
   fg[NORMAL] = "#70788d"
   fg[PRELIGHT] = "#ffffff"
   fg[ACTIVE] = "#ffffff"
@@ -23,7 +23,7 @@ style "menubar" {
 
 style "menubar-borderless" {
 
-  bg[NORMAL] = "#e7e8eb"
+  bg[NORMAL] = "#f6f6fc"
   fg[NORMAL] = "#70788d"
   fg[SELECTED] = @fg_color
   fg[INSENSITIVE] = shade(1.3, "#70788d")
@@ -156,7 +156,7 @@ class "ChromeGtkFrame"                                              style "chrom
 widget_class "*<GtkMenuBar>*<GtkMenuItem>*<GtkAccelLabel>"          style "menubar-text"
 
 # Whitelist for dark toolbars
-widget_class "*ThunarWindow*<GtkMenuBar>"                           style "menubar-borderless"
-widget_class "*CajaNavigationWindow*<GtkMenuBar>"                   style "menubar-borderless"
+widget_class "*ThunarWindow*<GtkMenuBar>"                           style "menubar"
+widget_class "*CajaNavigationWindow*<GtkMenuBar>"                   style "menubar"
 widget_class "*ThunarWindow*<GtkToolbar>*<GtkEntry>"                style "toolbar_entry"
 widget_class "*CajaNavigationWindow*<GtkToolbar>*<GtkEntry>"        style "toolbar_entry"

@@ -196,8 +196,8 @@
   // hovered header-bar button
   //
     color: $header_fg;
-    border-color: $header_bg;
-    background-color: $header_bg;
+    border-color: if($darker=='false' and $variant=='light', gtkalpha($header_border, 0.5), transparent);
+    background-color: if($darker=='false' and $variant=='light', gtkalpha(white, 0.65), gtkalpha(white, 0.15));
 
   }
 

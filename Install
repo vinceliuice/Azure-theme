@@ -25,10 +25,18 @@ for trans in '' '-solid' ; do
 	install -d ${themedir}
 
 	# Install index.theme
-	cd ${srcdir}
-	cp -ur \
-	index${trans}${color}.theme \
-	${themedir}/index.theme
+	echo "[Desktop Entry]" >> ${themedir}/index.theme
+	echo "Type=X-GNOME-Metatheme" >> ${themedir}/index.theme
+	echo "Name=Azure${trans}${color}" >> ${themedir}/index.theme
+	echo "Comment=A flat theme with transparent elements" >> ${themedir}/index.theme
+	echo "Encoding=UTF-8" >> ${themedir}/index.theme
+	echo "" >> ${themedir}/index.theme
+	echo "[X-GNOME-Metatheme]" >> ${themedir}/index.theme
+	echo "GtkTheme=Azure${trans}${color}" >> ${themedir}/index.theme
+	echo "MetacityTheme=Azure${trans}${color}" >> ${themedir}/index.theme
+	echo "IconTheme=Adwaita" >> ${themedir}/index.theme
+	echo "CursorTheme=Adwaita" >> ${themedir}/index.theme
+	echo "ButtonLayout=menu:minimize,maximize,close" >> ${themedir}/index.theme
 
 	# Install GNOME Shell Theme
 	install -d ${themedir}/gnome-shell
@@ -118,6 +126,18 @@ for trans in '' '-solid' ; do
 	cp -ur \
 		window-buttons${color} \
 		${themedir}/unity/window-buttons
+
+	# Install xfwm4 Theme
+	install -d ${themedir}/xfwm4
+	cd ${srcdir}/xfwm4
+
+	cp -ur \
+		assets${color}/*.png \
+		${themedir}/xfwm4
+
+	cp -ur \
+		themerc${color} \
+		${themedir}/xfwm4/themerc
 
   done
 done

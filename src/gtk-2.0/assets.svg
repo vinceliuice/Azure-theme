@@ -15,7 +15,7 @@
    height="416"
    id="svg9892"
    version="1.1"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="assets.svg">
   <defs
      id="defs9894">
@@ -972,12 +972,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.99999996"
-     inkscape:cx="224.02623"
-     inkscape:cy="274.2663"
+     inkscape:zoom="1.9999999"
+     inkscape:cx="398.86415"
+     inkscape:cy="276.08421"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      showborder="false"
      inkscape:window-width="1366"
      inkscape:window-height="694"
@@ -1010,7 +1010,8 @@
     <sodipodi:guide
        orientation="1,0"
        position="378.875,-145.75"
-       id="guide8384" />
+       id="guide8384"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata9897">
@@ -6237,14 +6238,14 @@
        id="menubar-light"
        style="display:inline">
       <rect
-         style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#f0f1f5;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect1769"
          width="24"
          height="32"
          x="437"
          y="111" />
       <rect
-         style="opacity:1;fill:#d7d8dd;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#e2e4ec;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect1771"
          width="24"
          height="1"
