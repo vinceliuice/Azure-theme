@@ -4,11 +4,6 @@
 .nautilus-window {
   paned > separator {
     background-image: _solid($dark_sidebar_border);
-
-    @if $variant=='light' {
-      &:dir(ltr) { margin-left: -1px; }
-      &:dir(rtl) { margin-right: -1px; }
-    }
   }
 }
 

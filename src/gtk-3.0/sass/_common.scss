@@ -1217,7 +1217,9 @@ headerbar {
       color: $selection_mode_fg;
       background-color: transparentize($selection_mode_fg, 1);
     }
+
     &:hover { background-color: gtkalpha($selection_mode_fg, 0.3); }
+
     &:active, &:checked { @extend %selected-button:active; }
 
     &:disabled {
@@ -1225,6 +1227,7 @@ headerbar {
 
       &:checked, &:active { @extend %selected-button:disabled:checked; }
     }
+
     &:backdrop { opacity: 0.7; background: none; }
   }
 
@@ -1242,6 +1245,7 @@ headerbar {
       border-style: solid;
     }
   }
+
   .linked:not(.vertical):not(.path-bar) {
     $_uncolored_button: 'button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action)';
 
@@ -1255,31 +1259,48 @@ headerbar {
   .linked:not(.vertical).path-bar {
 
     > button {
-    padding-top: 3px;
-    padding-bottom: 6px;
-    margin: 0;
-    border: none;
-    color: transparentize($header_fg, 0.2);
-    background-color: transparent;
+      padding-top: 3px;
+      padding-bottom: 6px;
+      margin: 0;
+      border: none;
+      color: transparentize($header_fg, 0.2);
+      background-color: transparent;
 
       &:hover {
-          color: $header_fg;
-          background-color: if($darker=='false' and $variant=='light', gtkalpha(white, 0.65), gtkalpha(white, 0.15));
-        }
+        color: $header_fg;
+        background-color: if($darker=='false' and $variant=='light', gtkalpha(white, 0.65), gtkalpha(white, 0.15));
+      }
 
       &:active, &:checked {
-          transition: background-color 0.00001s 0.3s;
-          animation: header_ripple_effect 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
-          color: if($darker == 'true', $header_fg, darken($header_fg, 15%)); 
-          background-color: darken($header_bg, 10%); 
-          box-shadow: if($darker=='true', inset 0 -2px transparentize($header_fg, 0.1), inset 0 -2px $selected_bg_color);
-        }
+        transition: background-color 0.00001s 0.3s;
+        animation: header_ripple_effect 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
+        color: if($darker == 'true', $header_fg, darken($header_fg, 15%));
+        background-color: darken($header_bg, 10%);
+        box-shadow: if($darker=='true', inset 0 -2px transparentize($header_fg, 0.1), inset 0 -2px $selected_bg_color);
+      }
 
       &:disabled { color: transparentize($header_fg, 0.4); }
 
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked-flat; }
     }
+
     @include pathbar_linking_rules($sep_color:$header_button_border);
+  }
+
+  // special case for stack-switchers
+  .linked:not(.vertical):not(.path-bar).stack-switcher {
+    > button {
+      @include button(header-hover);
+      background-color: lighten($header_bg, 5%);
+      &:hover { background-color: lighten($header_bg, 10%); }
+      &:active, &:checked { @include button(header-active); background-color: if($darker == 'true', lighten($header_bg, 15%), $selected_bg_color); }
+      &:disabled { color: transparentize($header_fg, 0.4); }
+
+      &, &:hover, &:active, &:checked, &:disabled {
+        @extend %linked;
+        border-color: gtkalpha(#000, 0.1);
+      }
+    }
   }
 
   // use linking rules for entries only
@@ -1301,15 +1322,19 @@ headerbar {
         @include button(undecorated);
         color: $b_color;
       }
+
       &:hover {
+        @include button(suggested_destructive, lighten($b_color, 5%), $b_fg);
+      }
+
+      &:active, &:checked {
         @include button(suggested_destructive, lighten($b_color, 10%), $b_fg);
       }
-      &:active, &:checked {
-        @include button(suggested_destructive, darken($b_color, 10%), $b_fg);
-      }
+
       &.flat:disabled,
       &:disabled { @include button(header-insensitive); }
     }
+
     button.#{$b_type}:backdrop,
     button.#{$b_type}:backdrop {
       opacity: 0.8;
@@ -1319,9 +1344,10 @@ headerbar {
   // Headerbar Spinbuttons
   spinbutton:not(.vertical) {
     &:focus {
-    color: $header_fg;
-    caret-color: $header_fg;
+      color: $header_fg;
+      caret-color: $header_fg;
     }
+
     button {
       &,&:disabled { @include button(header-hover); }
 
@@ -1362,6 +1388,7 @@ headerbar {
         &:focus { box-shadow: none; }
         @if $variant=='light' and $darker=='false' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
       }
+
       &:dir(rtl) {
         border-left-style: none;
 
@@ -1369,6 +1396,7 @@ headerbar {
         @if $variant=='light' and $darker=='false' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
       }
     }
+
     > .linked > button.combo {
       &:dir(ltr) {
         &, &:hover, &:active, &:checked, &:disabled {
@@ -1376,6 +1404,7 @@ headerbar {
           border-bottom-left-radius: 0;
         }
       }
+
       &:dir(rtl) {
         &, &:hover, &:active, &:checked, &:disabled {
           border-top-right-radius: 0;
@@ -1413,15 +1442,18 @@ headerbar {
         background-color: lighten($_slider_bg, 5%);
         border-color: $_slider_border;
       }
+
       &:active {
         background-color: $selected_bg_color;
         border-color: $selected_bg_color;
       }
+
       &:disabled {
         background-color: mix($_slider_bg, $header_bg, 70%);
         border-color: $_slider_border;
       }
     }
+
     trough {
       background-color: $_trough_bg;
 
@@ -1429,20 +1461,6 @@ headerbar {
     }
   }
 }
-
-
-  // special case for stack-switchers
-  .linked:not(.vertical):not(.path-bar).stack-switcher {
-    > button {
-      @include button(header-hover);
-      background-color: lighten($header_bg, 5%);
-      &:hover { background-color: lighten($header_bg, 10%); }
-      &:active, &:checked { @include button(header-active); background-color: if($darker == 'true', lighten($header_bg, 15%), $selected_bg_color); }
-      &:disabled { color: transparentize($header_fg, 0.4); }
-
-      &, &:hover, &:active, &:checked, &:disabled { @extend %linked; border-color: gtkalpha(#000, 0.1); border-width: 1px; }
-    }
- }
 
 //
 // Pathbars
@@ -2840,7 +2858,7 @@ placessidebar {
     }
 
     &:hover { box-shadow: inset 3px 0 lighten($selected_bg_color, 10%); }
-      
+
     &.sidebar-placeholder-row {
       padding: 0 8px;
       min-height: 2px;
@@ -3265,8 +3283,8 @@ headerbar,
 
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
     padding: 0;                        // already handled by the titlebar-padding
-    min-width: 32px;
-    min-height: 28px;
+    min-width: 23px;
+    min-height: 23px;
     margin: 0;
   }
 
@@ -3282,15 +3300,24 @@ headerbar,
     &:hover {
       @include button(header-hover);
     }
+
     &:active, &:checked {
       @include button(header-active);
     }
-    &.close, &.maximize, &.minimize, &.restore {
+
+    &.close, &.maximize, &.minimize {
       color: transparent;
       background-color: transparent;
       background-position: center;
       background-repeat: no-repeat;
-      border-width: 0;
+      border: none;
+      min-width: 31px;
+      min-height: 27px;
+
+      &:hover, &:active {
+        animation: none;
+        transition: background-image 100ms;
+      }
 
       &:backdrop { opacity: 1; }
     }
@@ -3300,17 +3327,20 @@ headerbar,
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
 
         &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}.png'),
-                                                     url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
+                                                     url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png'));
+        }
       }
     }
+  }
 
-    // Load png assets for Chrome window restore button
+  .fullscreen &,
+  .maximized & {
+    button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
-
-        &.restore#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}#{$darker_asset_suffix}.png'),
-                                                     url('assets/titlebutton-maximize#{$m}#{$darker_asset_suffix}@2.png')); }
+      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-restore#{$m}#{$darker_asset_suffix}.png'),
+                                                      url('assets/titlebutton-restore#{$m}#{$darker_asset_suffix}@2.png')); }
       }
-
+    }
   }
 }
 

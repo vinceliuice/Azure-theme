@@ -58,7 +58,7 @@ $dark_sidebar_bg: white;
 @if $transparency=='false' and $variant=='dark' { $dark_sidebar_bg: #383C4A; }
 
 $dark_sidebar_fg: $text_color;
-$dark_sidebar_border: if($variant == 'light', $dark_sidebar_bg, darken($dark_sidebar_bg, 5%));
+$dark_sidebar_border: if($variant == 'light', darken($dark_sidebar_bg, 6%), darken($dark_sidebar_bg, 5%));
 
 $osd_fg_color: $text_color;
 $osd_bg_color: if($variant=='light', transparentize(#e7e8eb, 0.05), transparentize(#353945, 0.05));

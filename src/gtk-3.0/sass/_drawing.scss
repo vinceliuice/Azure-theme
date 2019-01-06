@@ -197,8 +197,7 @@
   //
     color: $header_fg;
     border-color: if($darker=='false' and $variant=='light', gtkalpha($header_border, 0.5), transparent);
-    background-color: if($darker=='false' and $variant=='light', gtkalpha(white, 0.65), gtkalpha(white, 0.15));
-
+    background-color: if($darker=='false' and $variant=='light', white, gtkalpha(white, 0.15));
   }
 
   @else if $t==header-active {
@@ -207,7 +206,7 @@
   //
     color: $selected_fg_color;
     border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
-    background-color: $selected_bg_color;
+    background-color: if($darker=='false' and $variant=='light', $selected_bg_color, gtkalpha(white, 0.3));
   }
 
   @else if $t==header-insensitive {
@@ -226,7 +225,7 @@
   //
     color: transparentize($selected_fg_color, 0.25);
     border-color: transparentize($selected_bg_color, 0.35);
-    background-color: transparentize($selected_bg_color, 0.35);
+    background-color: if($darker=='false' and $variant=='light', transparentize($selected_bg_color, 0.35), gtkalpha(white, 0.15));
   }
 
   @else if $t==osd {

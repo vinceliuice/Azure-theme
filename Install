@@ -14,12 +14,11 @@ fi
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-  rm -rf $DEST_DIR/Azure*
-
 # Copying files
-for trans in '' '-solid' ; do
-  for color in '' '-light' ; do
+for trans in '' '-solid'; do
+  for color in '' '-light'; do
 	echo -e "   Installing Azure${trans}${color} ..."
+  rm -rf $DEST_DIR/Azure${trans}${color}
 
 	themedir=$DEST_DIR/Azure${trans}${color}
 	install -d ${themedir}
@@ -56,10 +55,10 @@ for trans in '' '-solid' ; do
 		gnome-shell${color}.css \
 		${themedir}/gnome-shell/gnome-shell.css
 
-		glib-compile-resources \
-		--sourcedir=${themedir}/gnome-shell \
-		--target=${themedir}/gnome-shell/gnome-shell-theme.gresource \
-		gnome-shell-theme.gresource.xml
+#		glib-compile-resources \
+#		--sourcedir=${themedir}/gnome-shell \
+#		--target=${themedir}/gnome-shell/gnome-shell-theme.gresource \
+#		gnome-shell-theme.gresource.xml
 
 	# Install GTK+ 2 Theme
 	install -d ${themedir}/gtk-2.0
